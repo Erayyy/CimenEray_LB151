@@ -141,11 +141,11 @@ Projekt aufstarten:
 
 1. Repo von Github Klonen.
 2. .env Datei unter /src hinzufügen.
-3. Folgende Variabeln eingeben:
-    DATABASE_URL: Die Url zur MySQL Datenbank (In diesem Fall "mysql://root:@localhost:3306/gluecksrad")
-    GITHUBID: Die ID der eigenen Github OAuth App
-    GITHUBSECRET: Die Secret ID der eigenen Github OAuth App
-    DISCORDID: Die ID der eigenen Discord Oauth App
+3. Folgende Variabeln eingeben:  
+    DATABASE_URL: Die Url zur MySQL Datenbank (In diesem Fall "mysql://root:@localhost:3306/gluecksrad")  
+    GITHUBID: Die ID der eigenen Github OAuth App  
+    GITHUBSECRET: Die Secret ID der eigenen Github OAuth App  
+    DISCORDID: Die ID der eigenen Discord Oauth App  
     DISCORDSECRET: Die Secret ID der eigenen Discord OAuth App
 4. "npm install" in den Terminal eingeben.
 5. Prisma Cli herunterladen ("npx prisma")
