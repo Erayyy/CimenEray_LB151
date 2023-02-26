@@ -26,7 +26,7 @@
 # 2 Technologie
 
 * Tier 1 (Presentation): React JS, Javascript, HTML, CSS, Bootstrap-Komponentenbibliothek
-* Tier 2 (Webserver): Next.js, Postman (für Tests)
+* Tier 2 (Webserver): Next.js
 * Tier 3 (Application Server): Next.js, Prisma
 * Tier 4 (Dataserver): MySQL, XAMPP, MySQL Workbench
 
@@ -45,26 +45,40 @@ Kausalkette (Beispiel):
 
 # 4.1 User Stories
 
-| US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
-| ---- | --------------- | ---- | ---------------------------------- |
-| 1    | Muss                | Funktional     | Als Spieler möchte ich eine Highscore-Liste vorgeführt bekommen, damit ich sehen kann, wie ich mit anderen Spieler abgeschnitten habe.  |
-| 2  | Muss                | Funktional     | Als Spieler möchte ich meine Lebenspunkte zu jeder Zeit sehen, damit ich weiss, wie viele Fehler ich mir noch erlauben kann. |
-| 3  | Muss                | Funktional     | Als Administrator möchte ich einzelne Einträge der Highscore-Liste löschen können.  |
-| A  | Muss                | Qualität     | Als Nutzer möchte ich jeweils eine Ladezeit von höchstens 3 Sekunden (lokal gehostete Plattform), damit ich nicht ungeduldig werde. |
-| B  | Kann                | Rand     | Als Nutzer möchte ich, dass die Plattform responsive designet wurden, damit ich die Website auf meinem Rechner, wie auch auf meinem Handy benutzen kann. |
+| US-№ | Verbindlichkeit | Typ        | Beschreibung                                                                                                |
+|------|----------------|------------|-------------------------------------------------------------------------------------------------------------|
+| 1    | Muss           | Funktional | Als Administrator möchte ich mich mit meinem Benutzernamen und Passwort anmelden, damit ich auf meine Adminfunktionen zugreifen kann. |
+| 2    | Muss           | Funktional | Als Administrator möchte ich Phrasen und Rätselwörter anlegen und löschen können, damit ich die Inhalte der Rätsel aktualisieren kann.   |
+| 3    | Muss           | Funktional | Als Administrator möchte ich Kategorien anlegen und jedem Wort bzw. jeder Phrase einer Kategorie zuordnen können, damit Spieler die Kategorie als Tipp beim Spielen verwenden können. |
+| 4    | Muss           | Funktional | Als Administrator möchte ich einzelne Einträge der Highscore-Liste löschen können, damit ich unangemessene Highscoreseinträge nicht zusehen sind. |
+| 5    | Muss           | Funktional | Als Kandidat möchte ich zu jeder Zeit den Kontostand sehen können, um meine Gewinne und Verluste zu verfolgen. |
+| 6    | Muss           | Funktional | Als Kandidat möchte ich zu jeder Zeit die Anzahl meiner Lebenspunkte sehen, um meine Spielstrategie anpassen zu können.|
+| 7    | Muss           | Funktional | Als Kandidat möchte ich nach jeder Spielrunde wissen, ob meine Antwort richtig oder falsch war, damit ich mein Wissen verbessern kann. |
+| 8    | Muss           | Funktional | Als Kandidat möchte ich in der Highscore-Liste folgende Daten sehen: Rang, Name des Spielers, Zeitpunkt des Spiels, Geldbetrag und Anzahl der Spielrunden, um meine Leistung im Vergleich zu anderen Spielern zu vergleichen. |
+| 9    | Muss           | Funktional | Als Administrator möchte ich sicherstellen, dass kein Rätsel-Wort oder keine Phrase einem Spieler mehr als einmal gestellt wird, damit die Fairness des Spiels gewährleistet ist.                         |
+| 10    | Muss           | Funktional | Als Kandidat möchte ich jederzeit das Spiel aufhören aufhören können, damit ich in einem Spiel mit schlechten Karten mein Geld nicht verlieren muss. |
+| 11    | Muss           | Funktional | Als Administrator möchte ich das Spiel mit einer spielbaren Anzahl von Wörtern und Fragen füllen, um den Spieler eine ausreichende Spielzeit zu bieten. |
+| 12    | Muss           | Funktional | Als Benutzer möchte ich, dass die Anzahl der Runden in einem Spiel gezählt werden, damit ich diese Anzahl auf der Highscoreliste sehen kann. |
+| 13    | Muss | Rand | Als Benutzer möchte ich, dass leere Formulareingaben auf Client- und Serverseite geprüft werden, damit Risiken vorgebeugt werden können. |
+
 
 # 4.2 Testfälle
 
 | TC-№ | Vorbereitung | Eingabe | Erwartete Ausgabe |
 | ---- | ------------ | ------- | ----------------- |
-| 1.1  | Die Plattform ist gestartet und der Nutzer sieht die Navigation vor sich auf dem Webbrowser. | Auf "Highscore-List" klicken. | Auf der folgende Seite wird eine Highscore-Liste mit Rang, Name, Zeitpunkt, Geldbetrag und Anzahl der Spielrunden der gespielten Runden angezeigt. |
-| 2.1  | Es wurde ein neues Spiel gestartet. | Vokal kaufen, der nicht im Rätselwort oder Phrase vorkommt.         | Auf der Lebensleiste werden nun nur noch 2 Herzen angezeigt. |
-| 2.2  | Es wurde ein neues Spiel gestartet.             | Konsonant raten, der nicht im Rätselword oder Phrase vorkommt. | Auf der Lebensleiste werden nun nur noch 2 Herzen angezeigt.                   |
-| 3.1  | Der Administrator öffnet die MySQL-Workbench.              | Die vorgespeicherte Funktion zum Löschen ausführen und in die Eingane "1" eingeben. | Auf der Tabelle der Highscore-Liste fehlt nun der Eintrag mit dem Index "1". |
-| A.1  | Der Tester hat seinen Lieblingsbrowser offen und das Frontend, Backend und die Datenbank lokal gestartet. | Die URL im Browser für die Plattform eingeben. | Die Ladezeit beträgt kürzer als drei Sekunden. |
-| B.1  | Der Tester Hat die Website auf seinem Rechner offen. | Alle Knöpfe und Texte überprüfen, ob sie zugänglich sind.  | Alle Knöpfe führen die erwartete Aktionen aus, alle Texte aus dem HTML Quelltext werden im richtigen Layout angezeigt. |
-| B.2  | Der Tester Hat die Website auf seinem Rechner offen und stellt bei den Entwicklertools ein, dass die Seitengrössen so, wie auf dem iPhone 12 Pro sind. | Alle Knöpfe und Texte überprüfen, ob sie zugänglich sind.  | Alle Knöpfe führen die erwartete Aktionen aus, alle Texte aus dem HTML Quelltext werden im richtigen Layout angezeigt. |
-| B.3  | Der Tester Hat die Website auf seinem Rechner offen und stellt bei den Entwicklertools ein, dass die Seitengrössen so, wie auf dem iPad Air sind. | Alle Knöpfe und Texte überprüfen, ob sie zugänglich sind.  | Alle Knöpfe führen die erwartete Aktionen aus, alle Texte aus dem HTML Quelltext werden im richtigen Layout angezeigt. |
+| 1.1  | Die Plattform ist gestartet und der Tester ist nicht angemeldet. | Auf eines der Anmeldungsmöglichkeiten klicken (Discord, Github) und Name und Passwort eingeben | Der Nutzer wird zurück zur Seite weitergeleitet und sieht unter "Profil" das Admininterface. |
+| 2.1  | Die Plattform ist gestartet und der Tester ist mit dem Githubprofil von Eray Çimen, dem Admin, angemeldet. | Auf "Profil" auf der Navigation klicken. | Der Admin kann nun Rätselwörter anlegen und löschen. |
+| 3.1  | Die Plattform ist gestartet und der Tester ist mit dem Githubprofil von Eray Çimen, dem Admin, angemeldet. | Auf "Profil" auf der Navigation klicken. | Der Admin kann nun Kategorien zu Rätselwörter zuordnen. |
+| 4.1  | Die Plattform ist gestartet und der Tester ist mit dem Githubprofil von Eray Çimen, dem Admin, angemeldet. | Auf "Highscore" auf der Navigation klicken.  | Der Admin kann nun einzelne Einträge aus der Highscoreliste entfernen. |
+| 5.1  | Der Tester ist mit einem Account angelemdet. | Auf "Spielen" auf der Navigation klicken. | Der Kontostand ist zu allen Zeiten einsehbar. |
+| 6.1  | Der Tester ist mit einem Account angelemdet. | Auf "Spielen" auf der Navigation klicken und absichtlich einen falschen Buchstaben eingeben. | Dem Tester wird ein Herz abgezogen. |
+| 7.1  | Der Tester ist mit einem Account angelemdet. | Auf "Spielen" auf der Navigation klicken und absichtlich einen falschen Buchstaben eingeben. | Der Tester erhält eine Textausgabe, worin steht, dass er einen falschen Buchstaben versucht zu erraten hat. |
+| 7.2  | Der Tester ist mit einem Account angelemdet. | Auf "Spielen" auf der Navigation klicken und einen richtigen Buchstaben eingeben. | Der Tester erhält eine Textausgabe, worin steht, dass er einen richtigen Buchstaben erraten hat. |
+| 8.1  | Der Tester ist mit einem Account angelemdet | Auf "Highscore" auf der Navigation klicken. | Der Tester sieht nun die Highscores mit gennanten Daten. |
+| 9.1  | Der Tester ist mit einem Account angelemdet | Auf "Spielen" auf der Navigation klicken und ein Spiel fertig spielen. | Klickt der Tester erneut auf "Spielen", so kommt eine andere Phrase. |
+| 10.1  | Der Tester ist mit einem Account angelemdet | Ein neues Spiel beginnen und auf den Knopf "Aufhören" klicken.  | Auf der Highscoreliste ist das gestoppte Spiel zu sehen. |
+| 12.1  | Der Tester ist mit einem Account angelemdet | Auf "Spielen" auf der Navigation klicken und ein Buchstaben raten. | Die Runde wird gezählt und die Anzahl wird angezeigt. |
+| 13.1  | Der Tester ist mit einem Account angelemdet | Auf "Spielen" auf der Navigation klicken und trotz leerem Input, versuchen einen Buchstaben zu erraten. | Auf dem Eingabetext wird der Spieler informiert, dass er keinen Buchstaben eingegeben hat. |
 
 # 5 Prototyp
 
