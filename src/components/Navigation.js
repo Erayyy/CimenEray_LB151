@@ -9,13 +9,11 @@ export default function Navigation() {
 
   const {data: session, status} = useSession();
 
-  console.log(session?.user.id)
-
   return (
     <>
     <Navbar bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">Glücksrad</Navbar.Brand>
+      <Container fluid>
+        <Navbar.Brand href="/">Glücksrad</Navbar.Brand>
         <Nav className="me-auto">
 
           {status === "authenticated" ? <>

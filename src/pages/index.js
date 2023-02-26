@@ -1,14 +1,23 @@
 import Navigation from "../components/Navigation"
 import Head from 'next/head'
-import Image from 'next/image'
 import Phrase from "../components/phrase/Phrase"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginPage from "./LoginPage";
 import { useSession } from "next-auth/react";
+import { useEffect } from "react";
+import { Container } from "react-bootstrap";
 
 export default function Home() {
 
   const {data: session, status} = useSession();
+
+  const storeUser = async () => {
+    return fetch("/api/auth/storeuser")
+  }
+
+  useEffect(() => {
+      storeUser()
+  },[])
 
   return (
     <>
@@ -21,7 +30,7 @@ export default function Home() {
       <main>
         <Navigation></Navigation>
         <br />
-        <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap", padding: "0.3em"}}>
+        <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap", padding: "0.3em", height: "auto", width: "100%", margin: 0}}>
           { status === "unauthenticated" ? <LoginPage /> : <Phrase />}
         </div>
       </main>

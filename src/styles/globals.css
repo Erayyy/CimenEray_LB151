@@ -1,16 +1,24 @@
-html, body, #__next  {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
+  html, body {
+    margin: 0;
+    height: 100%;
+  }
 
-main {
-  height: 100%;
-  position: relative;
-  color: black;
-}
+  #__next {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
-.break-flex {
-  flex-basis: 100%;
-  width: 0;
-}
+  main {
+    height: 100%;
+    width: 100%;
+    color: black;
+  }
+
+  .break-flex {
+    flex-basis: 100%;
+    width: 0;
+  }

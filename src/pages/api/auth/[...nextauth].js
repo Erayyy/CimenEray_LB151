@@ -1,9 +1,8 @@
 import NextAuth from "next-auth"
 import GithubProvider from "next-auth/providers/github"
-import DiscordProvider from "next-auth/providers/discord" 
+import DiscordProvider from "next-auth/providers/discord"
 
 export const authOptions = {
-  // Configure one or more authentication providers
   providers: [
     GithubProvider({
       clientId: process.env.GITHUBID,
@@ -13,8 +12,8 @@ export const authOptions = {
       clientId: process.env.DISCORDID,
       clientSecret: process.env.DISCORDSECRET,
     })
-    // ...add more providers here
-  ],
+  ], 
+  secret: "mfRRZXfR7M8lIIK3q0Dze5/87V3637aQ6tNTOA==NRjpAhRj33T0pQHO29ruxyT0",
   callbacks: {
     session: async ({ session, token }) => {
       if (session?.user) {
@@ -28,6 +27,7 @@ export const authOptions = {
       }
       return token;
     },
+
   },
   session: {
     strategy: "jwt",
@@ -35,7 +35,7 @@ export const authOptions = {
     updateAge: 24 * 60 * 60,
     generateSessionToken: () => {
         return randomUUID?.() ?? randomBytes(32).toString("hex")
-    }
+    }, 
   },
 }
 

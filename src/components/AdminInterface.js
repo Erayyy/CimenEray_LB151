@@ -14,7 +14,7 @@ export default function AdminInterface() {
     const [currPhrase, setCurrPhrase] = useState();
 
     const postPhrase = async () => {
-        return await fetch("/api/addphrase", {
+        return await fetch("/api/admin/addphrase", {
             method: "POST",
             body: JSON.stringify({
                 phrase: phrase,
@@ -25,10 +25,29 @@ export default function AdminInterface() {
     } 
 
     const getPhrases = async () => {
-        return await fetch("/api/getphrases", {
-        }).then(res => res.json()
+        return await fetch("/api/admin/getphrases").then(res => res.json()
         .then((data) => setPhrases(data)))
     }    
+
+    const removePhrase = async () => {
+        return await fetch("/api/admin/removephrase", {
+            method: "DELETE",
+            body: JSON.stringify({
+                phrase: currPhrase,
+            })
+        }
+        );
+    }
+
+    const removeCategory = async () => {
+        return await fetch("/api/admin/removecategory", {
+            method: "DELETE",
+            body: JSON.stringify({
+                category: currCategory,
+            })
+        }
+        );
+    }
 
     useEffect(() => {
         getPhrases();
@@ -39,29 +58,30 @@ export default function AdminInterface() {
         const distinctCategories = [...new Set(phrases.map(item => item.category))];
         setCategories(distinctCategories);
         setCurrCategory(distinctCategories[0]);
-        phrases.forEach((val) => {
-            if (val.category === currCategory) {
-                setCurrPhrase(val);
+    }, [phrases])
+
+    useEffect(() => {
+        if (phrases == null) return;
+        for (const val of phrases) {
+            if (val.category == currCategory) {
+                setCurrPhrase(val)
                 return;
             }
-        })
-   }, [phrases])
-
-   console.log(currPhrase)
-   console.log(currCategory)
+        }
+    }, [currCategory])
 
   return (
     <div style={{marginRight: "30%"}}>
         <h4>AdminInterface</h4>
         <Form>
             <Form.Group className="mb-3">
-                <Form.Label>Rätselphrase/Rätselwort</Form.Label>
-                <Form.Control placeholder="Einem geschenkten Gaul schaut man nicht ins Maul" onChange={e => {setPhrase(e.target.value)}} />
+                <Form.Label>Kategorie</Form.Label>
+                <Form.Control placeholder="Sprichwörter" onChange={e => {setCategory(e.target.value)}} />
             </Form.Group>
 
             <Form.Group className="mb-3">
-                <Form.Label>Kategorie</Form.Label>
-                <Form.Control placeholder="Sprichwörter" onChange={e => {setCategory(e.target.value)}} />
+                <Form.Label>Rätselphrase/Rätselwort</Form.Label>
+                <Form.Control placeholder="Einem geschenkten Gaul schaut man nicht ins Maul" onChange={e => {setPhrase(e.target.value)}} />
             </Form.Group>
             <Button variant="primary" type="submit" onClick={() => postPhrase()}>
                 Hinzufügen
@@ -77,18 +97,22 @@ export default function AdminInterface() {
                     return <option key={val +" "+ i}>{val}</option>
                 })}
             </Form.Select>
+            <br></br>
+            <Button type="submit" variant="danger" onClick={() => removeCategory()}>Kategorie Löschen</Button>
             </Form.Group>
         </Form>
         <br></br>
         <Form>
             <Form.Group controlId="formGridState">
             <Form.Label>Phrasen</Form.Label>
-            <Form.Select defaultValue="Choose..." value={currPhrase} onChange={(e) => setCurrPhrase(JSON.parse(e.target.value))}>
+            <Form.Select defaultValue="Choose..." onChange={(e) => setCurrPhrase(JSON.parse(e.target.value))}>
                 {phrases?.map((val, i, arr) => {
                     if (currCategory == val.category)
-                        return <option value={JSON.stringify(val)} key={val.phrase +" "+ val.id}  >{val.phrase}</option>
+                        return <option value={JSON.stringify(val)} key={val.phrase +" "+ val.id}>{val.phrase}</option>
                 })}
             </Form.Select>
+            <br></br>
+            <Button variant="danger" type="submit" onClick={() => removePhrase()}>Phrase Löschen</Button>
             </Form.Group>
         </Form>
         <br></br>
