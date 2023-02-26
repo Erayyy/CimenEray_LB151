@@ -86,18 +86,42 @@ Kausalkette (Beispiel):
 
 # 6 Implementation
 
-✍️ Halten Sie fest, wann Sie welche User Story bearbeitet haben
-
 | User Story | Datum | Beschreibung |
 | ---------- | ----- | ------------ |
-| ...        |       |              |
+| 1        | 6.02.2023      | Anmeldung durch OAuth 2.0 |
+| 2        | 13.02.2023      | - |
+| 3        | 13.02.2023      | - |
+| 4        | 25.02.2023      | - |
+| 5        | 6.02.2023      | - |
+| 6        | 6.02.2023      | - |
+| 7        | 6.02.2023      | - |
+| 8        | 24.02.2023      | - |
+| 9        | 20.02.2023      | - |
+| 10        | 6.02.2023      | - |
+| 11        | 13.02.2023      | - |
+| 12        | 6.02.2023      | - |
+| 13        | 26.02.2023      | - |
 
 # 7 Projektdokumentation
 
 | US-№ | Erledigt? | Entsprechende Code-Dateien oder Erklärung |
 | ---- | --------- | ----------------------------------------- |
-| 1    | ja / nein |                                           |
-| ...  |           |                                           |
+| 1    | ja  | Siehe [...nextauth].js                                           |
+| 2    | ja  | Siehe components/AdminInterface.js und /api/admin                                         |
+| 3    | ja  | Siehe components/AdminInterface.js und /api/admin                                           |
+| 4    | ja  | Siehe components/HighscoreTable.js und /api/admin                                          |
+| 5    | ja  | Siehe components/phrase/Phrase.js und /api/game                                           |
+| 6    | ja  | Siehe components/phrase/Phrase.js und /api/game                                          |
+| 7    | ja  | Siehe components/phrase/Phrase.js und /api/game                                          |
+| 8    | ja  | Siehe components/HighscoreTable.js und /api/highscore                                          |
+| 9    | ja  | Siehe /api/game/getphrase.js                                          |
+| 10    | ja  | Siehe components/phrase/Phrase.js und /api/game                                            |
+| 11   | ja  | Siehe components/AdminInterface.js und /api/admin                                            |
+| 12   | ja  | Siehe components/phrase/Phrase.js und /api/game                                          |
+| 13   | ja  | Siehe components/phrase/Phrase.js und /api/game                                       |
+
+Für das Sicherheitskonzept wurden in den Apiroutes jeweil Abfragen geschrieben.
+Bspw. kann ein normaler Spieler nicht auf die Api's unter /api/admin zugreifen.
 
 # 8 Testprotokoll
 
