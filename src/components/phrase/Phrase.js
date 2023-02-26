@@ -107,6 +107,10 @@ export default function Phrase(props) {
     }
 
     const handleGuess = (e) => {
+        if (char == "") {
+            setWheelMessage("Das Eingabefeld ist noch leer!");
+            return;
+        }
         e.preventDefault()
         if (stats.hearts <= 0) return;
         if (!isSpinned) return setWheelMessage("Das Glücksrad muss zuerst gedreht werden.")
