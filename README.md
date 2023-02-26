@@ -4,13 +4,14 @@
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
-|       | 0.0.1   | ✍️ Jedes Mal, wenn Sie an dem Projekt arbeiten, fügen Sie hier eine neue Zeile ein und beschreiben in *einem* Satz, was Sie erreicht haben. |
-|       | 0.0.2   |                                                              |
-|       | 0.0.3   |                                                              |
-|       | 0.0.4   |                                                              |
-|       | 0.0.5   |                                                              |
-|       | 0.0.6   |                                                              |
-|       | 1.0.0   |                                                              |
+| 6.02.2023     | 0.0.1   | Anmeldung durch OAuth 2.0 wurde implementiert. |
+| 6.02.2023     | 0.0.1   | Spielprinzip wurde implementiert. |
+| 13.02.2023     | 0.0.2   | Datenbank wurde in das Projekt eingebunden.                                                             |
+| 13.02.2023    | 0.0.3   | Admininterface wurde implementiert.                                                          |
+| 20.02.2023      | 0.0.4   | Spiel mit Backend verknüpft.                                                              |
+| 24.02.2023      | 0.0.5   | Highscoreliste wurde implementiert.                                                             |
+| 26.02.2023      | 1.0.0   | Bugs wurden behoben.                                                             |
+
 
 # 0 Ihr Projekt
 
