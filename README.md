@@ -33,7 +33,7 @@
 
 # 3 Datenbank
 
-Next.js verfügt über ein integriertes Routing, worin man Pages und APIs managed. Das React-Frontend kann auf die APIs wie bei einer REST-API zugreiffen. Werden alle Daten auf der Website zusammengestellt durch den Next.js Server, wird das Frontend endlich dem Client übergeben.
+Next.js verfügt über ein integriertes Routing, worin man Pages und APIs managed. Das React-Frontend kann auf die APIs wie bei einer REST-API zugreifen. Werden alle Daten auf der Website zusammengestellt durch den Next.js Server, wird das Frontend endlich dem Client übergeben.
 
 Kausalkette (Beispiel):
 
@@ -78,7 +78,7 @@ Kausalkette (Beispiel):
 | 8.1  | Der Tester ist mit einem Account angelemdet | Auf "Highscore" auf der Navigation klicken. | Der Tester sieht nun die Highscores mit gennanten Daten. |
 | 9.1  | Der Tester ist mit einem Account angelemdet | Auf "Spielen" auf der Navigation klicken und ein Spiel fertig spielen. | Klickt der Tester erneut auf "Spielen", so kommt eine andere Phrase. |
 | 10.1  | Der Tester ist mit einem Account angelemdet | Ein neues Spiel beginnen und auf den Knopf "Aufhören" klicken.  | Auf der Highscoreliste ist das gestoppte Spiel zu sehen. |
-| 12.1  | Der Tester ist mit einem Account angelemdet | Auf "Spielen" auf der Navigation klicken und ein Buchstaben raten. | Die Runde wird gezählt und die Anzahl wird angezeigt. |
+| 12.1  | Der Tester ist mit einem Account angelemdet | Auf "Spielen" auf der Navigation klicken und einen Buchstaben raten. | Die Runde wird gezählt und die Anzahl wird angezeigt. |
 | 13.1  | Der Tester ist mit einem Account angelemdet | Auf "Spielen" auf der Navigation klicken und trotz leerem Input, versuchen einen Buchstaben zu erraten. | Auf dem Eingabetext wird der Spieler informiert, dass er keinen Buchstaben eingegeben hat. |
 
 # 5 Prototyp
@@ -130,14 +130,30 @@ Bspw. kann ein normaler Spieler nicht auf die Api's unter /api/admin zugreifen.
 
 # 8 Testprotokoll
 
-✍️ Fügen Sie hier den Link zu dem Video ein, welches den Testdurchlauf dokumentiert.
+Achtung: Da NextAuth die Anmeldedaten automatisch abspeichert, war es mir nicht möglich dies detailliert zu dokumentieren. Bitte lesen Sie den Text im Video.  
+
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/WUTGsPf6MdQ/0.jpg)](https://www.youtube.com/watch?v=WUTGsPf6MdQ)
+
 
 | TC-№ | Datum | Resultat | Tester |
 | ---- | ----- | -------- | ------ |
-| 1.1  |       |          |        |
-| ...  |       |          |        |
+| 1.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 2.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 3.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 4.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 5.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 6.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 7.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 8.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 9.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 10.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 11.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 12.1  | 27.02.2023     | OK          | Eray Çimen       |
+| 13.1  | 27.02.2023     | OK          | Eray Çimen       |  
 
-✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
+Fazit:  
+Das Projekt funktioniert einwandfrei. Gestellte Usecases und weitere Anforderungen liefern erwartete Resultate, es müssen keine Überarbeitungen durchgeführt werden.
 
 # 9 `README.md`
 
@@ -159,6 +175,6 @@ Projekt aufstarten:
 
 # 10 Allgemeines
 
-- [ ] Ich habe die Rechtschreibung überprüft
-- [ ] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
-- [ ] Ich habe alle mit ✍️ markierten Teile ersetzt
+- [x] Ich habe die Rechtschreibung überprüft
+- [x] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
+- [x] Ich habe alle mit ✍️ markierten Teile ersetzt
