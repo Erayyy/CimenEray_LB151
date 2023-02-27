@@ -41,6 +41,7 @@ export default function Phrase(props) {
                             ...oldStats,
                             hearts: 0,
                             moneyAmount: 0,
+                            bankruptcy: true
                         }))
                 } else {
                     setWheelMessage("Du gewinnst "+ data.moneyBonus+ ", pro Buchstabe wenn diese richtig erraten werden!");
@@ -172,7 +173,11 @@ export default function Phrase(props) {
     }, [])
 
     useEffect(() => {
-        if (stats.hearts === 0) {
+        if (stats.bankruptcy) {
+            setWheelMessage("Du bist Bankrott gegangen!")
+            stopGame();
+        }
+        else if (stats.hearts === 0) {
             setWheelMessage("Du hast keine Herzen mehr, das Spiel ist vorbei.")
              stopGame();
         } else if (isWon()) {
@@ -181,6 +186,7 @@ export default function Phrase(props) {
         }
     }, [stats])
 
+    console.log(phrase)
 
   return (
     <> 
