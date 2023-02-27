@@ -82,8 +82,12 @@ Kausalkette (Beispiel):
 | 13.1  | Der Tester ist mit einem Account angelemdet | Auf "Spielen" auf der Navigation klicken und trotz leerem Input, versuchen einen Buchstaben zu erraten. | Auf dem Eingabetext wird der Spieler informiert, dass er keinen Buchstaben eingegeben hat. |
 
 # 5 Prototyp
+  
+Quiz-Seite:
+![Mockup1](https://user-images.githubusercontent.com/26624740/221490251-093c7459-e831-456d-a220-91a4884fb60d.PNG)  
 
-✍️ Erstellen Sie Prototypen für das GUI (Admin-Interface und Quiz-Seite).
+Admininterface:
+![Mockup2](https://user-images.githubusercontent.com/26624740/221490258-8ba3cb52-abea-4f43-aa09-80975aa3b565.PNG)
 
 # 6 Implementation
 
