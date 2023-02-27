@@ -131,7 +131,7 @@ Bspw. kann ein normaler Spieler nicht auf die Api's unter /api/admin zugreifen.
 # 8 Testprotokoll
 
 Achtung: Da NextAuth die Anmeldedaten automatisch abspeichert, war es mir nicht möglich dies detailliert zu dokumentieren. Bitte lesen Sie den Text im Video.  
-
+Hier klicken ⬇  
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/WUTGsPf6MdQ/0.jpg)](https://www.youtube.com/watch?v=WUTGsPf6MdQ)
 
