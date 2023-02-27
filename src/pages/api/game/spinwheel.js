@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     }
 
     const rand = getRandomArbitrary(0, 100);
-    if (rand < 99) {
+    if (rand < 80) {
         const moneyBonus = getRandomInt(0, 100);
         res.json({bankruptcy: false, moneyBonus: moneyBonus})
         return
