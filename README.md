@@ -126,7 +126,8 @@ Admininterface:
 | 13   | ja  | Siehe components/phrase/Phrase.js und /api/game                                       |
 
 Für das Sicherheitskonzept wurden in den Apiroutes jeweil Abfragen geschrieben.
-Bspw. kann ein normaler Spieler nicht auf die Api's unter /api/admin zugreifen.
+Bspw. kann ein normaler Spieler nicht auf die Api's unter /api/admin zugreifen.  
+Ebenfalls ist unter /src/pages/api/auth/storeuser.js zu sehen, dass diesbezüglich eine MySQL Transaktion mit Prisma implementiert wurde.
 
 # 8 Testprotokoll
 
